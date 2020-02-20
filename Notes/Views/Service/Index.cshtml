@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Notes.Models.Service>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+@*@foreach (var service in Model)
+{
+    <div class="col-sm-6" style="float: left; margin-bottom: 30px">
+
+
+        <h1 class="display-4"> @service.ServiceName</h1>
+        <p> @(@service.ImageUrl)</p>
+        <p> @(@service.Description)</p>
+        <p> @(@service.CreatedBy)</p>
+        <p> @(@service.CreatedDate)</p>
+        <p> @(@service.IsActive)</p>
+
+
+        <br>
+        <a href="@Url.Action("Edit", "Home", new {id = service.id})" class="btn btn-secondary">Edit</a>
+        <a href="@Url.Action("Delete", "Home", new {id = service.id})" class="btn btn-danger">Delete</a>
+    </div>
+}*@
+<div>
+<table id="data-table" class="table">
+    <thead style="color: #ffaa00">
+        <tr>
+            
+            <th>Service Name</th>
+            <th>Image Url</th>
+            <th>Description</th>
+            <th>Created By</th>
+            <th>Created Date</th>
+            <th>Is Active ?</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+
+            <tr>
+                <td>@Html.Raw(@service.ServiceName)</td>
+                <td>@Html.Raw(@service.ImageUrl)</td>
+                <td>@Html.Raw(@service.Description)</td>
+                <td>@Html.Raw(@service.CreatedBy)</td>
+                <td>@Html.Raw(@service.CreatedDate)</td>
+                <td>@Html.Raw(@service.IsActive)</td>
+               
+                <td>
+                    <a href="@Url.Action("Edit", "Service", new {id = service.id})" class="btn btn-secondary">Edit</a>
+                    <a href="@Url.Action("Delete", "Service", new {id = service.id})" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+</div>

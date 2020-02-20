@@ -1,0 +1,43 @@
+﻿@model Notes.Models.Service
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+
+        <hr />
+
+        <div class="form-group">
+            <p>Service Name</p>
+            <div>
+                @Html.TextAreaFor(model => model.ServiceName, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="form-group">
+            
+            <div>
+                <p>ImageUrl</p>
+                @Html.TextBoxFor(model => model.ImageUrl, new { @class = "form-control" })
+                <p>Description</p>
+                @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                <p>Created By</p>
+                @Html.TextBoxFor(model => model.CreatedBy, new { @class = "form-control" })
+                <p>Created Date</p>
+                @Html.TextBoxFor(model => model.CreatedDate, new { @class = "form-control" })
+                <p>Is Active?</p>
+                @Html.TextBoxFor(model => model.IsActive, new { @class = "form-control" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-success" style=" width: 17%; display: block; margin: auto" />
+        </div>
+
+    </div>
+}

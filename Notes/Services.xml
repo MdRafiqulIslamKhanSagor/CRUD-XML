@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Services>
+  <note>
+    <id>242316512</id>
+    <ServiceName>Driving</ServiceName>
+    <ImageUrl>url//1234564</ImageUrl>
+    <Description>Nothing</Description>
+    <CreatedBy>sagor</CreatedBy>
+    <CreatedDate>12/12/2020</CreatedDate>
+    <IsActive>true</IsActive>
+  </note>
+  <note>
+    <id>1757435350</id>
+    <ServiceName>Development</ServiceName>
+    <ImageUrl>1233abcdefghij</ImageUrl>
+    <Description>Nothing</Description>
+    <CreatedBy>sagor</CreatedBy>
+    <CreatedDate>12/12/2020</CreatedDate>
+    <IsActive>true</IsActive>
+  </note>
+</Services>
